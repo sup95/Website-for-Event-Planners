@@ -1,0 +1,12 @@
+from django.db import models
+
+
+class Caterers(models.Model):
+    //author = models.ForeignKey('auth.User')
+    caterer_name = models.CharField(max_length=100)
+    cuisine = models.CharField(max_length=100)
+    cost = models.IntegerField()    
+
+
+    def __str__(self):
+        return self.caterer_name

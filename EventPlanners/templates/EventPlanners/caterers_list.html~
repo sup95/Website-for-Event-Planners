@@ -1,0 +1,8 @@
+{% for cat in cats %}
+    <div>
+        <h1>{{ cat.caterer_name }}</a></h1>
+	<p>Cuisine:{{ cat.cuisine }}</p>
+        <p>{{ cat.cost }}</p>
+	<p>{{ cat.caterer_id }}</p>
+    </div>
+{% endfor %}
