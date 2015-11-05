@@ -1,0 +1,135 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Event Planning and Booking</title>
+<link href="{% static "css/style.css" %}" type="text/css" rel="stylesheet" />
+
+</head>
+<body>
+	<div id="header">
+	</div>
+	
+
+
+   <div id="section_1">
+    <div id="nav">
+	   <div id="nav_wrapper">
+	       <ul>
+		       <li><a href="#"><b>Themes</b></a>
+				    <ul>
+				     <li><a href="#"><b>Birthday Party</b></a></li>
+				     <li><a href="#"><b>Social Event</b></a></li>
+				     <li><a href="#"><b>Large Event</b></a></li>
+				     <li><a href="#"><b>Wedding</b></a></li>
+				     <li><a href="#"><b>corporate Event</b></a></li>
+				    </ul>
+			   </li>
+			   <li><a href="#"><b>Venue</b></a>
+			      <ul>
+				     <li><a href="#"><b>Banquet Hall</b></a></li>
+				     <li><a href="#"><b>Roof Top</b></a></li>
+				     <li><a href="#"><b>Poolside</b></a></li>
+				     <li><a href="#"><b>Conference Center</b></a></li>
+				     <li><a href="#"><b>Open Space</b></a></li>
+				     <li><a href="#"><b>Hotel</b></a></li>
+				  </ul>
+				</li>  
+			   <li><a href="caterers_list.html"><b>Caterer</b></a></li>
+			   <li><a href="#"><b>Photographer</b></a>
+					<ul>
+				     <li><a href="#"><b>Candid</b></a></li>
+					 <li><a href="#"><b>HDR</b></a></li>
+				   </ul>
+			   </li>
+			   <li><a href="#"><b>Decorators</b></a>
+					<ul>
+				     <li><a href="#"><b>Birthday Party</b></a></li>
+				     <li><a href="#"><b>Social Event</b></a></li>
+				     <li><a href="#"><b>Large Event</b></a></li>
+				     <li><a href="#"><b>Wedding</b></a></li>
+				     <li><a href="#"><b>corporate Event</b></a></li>
+				    </ul>
+				</li>
+			   <li><a href="#"><b>Accomodations</b></a></li>
+			   <li><a href="#"><b>Entertainment Events</b></a>
+										<ul>
+				     <li><a href="#"><b>DJ</b></a></li>
+				     <li><a href="#"><b>Singers</b></a></li>
+				     <li><a href="#"><b>Music Band</b></a></li>
+				     <li><a href="#"><b>Choreographer</b></a></li>
+				    </ul>
+				</li>
+			   
+			</ul>
+         </div>
+     </div>
+	 
+
+	<script language="JavaScript">
+	var i = 0;
+	var path = new Array();
+ 
+	// LIST OF IMAGES
+	path[0] = "{% static "images/images1.jpg" %}";
+	path[1] = "images2.jpg";
+	path[2] = "images3.jpg";
+	path[3] = "images4.jpg";
+	path[4] = "images5.jpg";
+
+	function swapImage()
+	{
+		document.slide.src = path[i];
+		if(i < path.length - 1) i++; else i = 0;
+		setTimeout("swapImage()",3000);
+	}
+	window.onload=swapImage;
+	</script>
+	<img height="400px" name="slide" src="images1.jpg" width="100%" />
+
+	<br>
+	<br>
+	</div>
+	<div id="content">
+	<div id="hd1">
+	<h3>About us</h3>
+	</div>
+	<div id="aboutus">
+	<p>One's ability to think gives him his identity in this world. The thoughts and way of thinking of a person decides his character and talents. kjdekjd jdfnoejo jdnjnj ejfniwjeoiwq ejnwjjkowj rfneknfkwkefjke jenfkenef jenwwndf efnejnf wajnwjn kefnje ejnje ejfe fjfne eekfke </p>
+	</div>
+	<div id="hd2">
+	<h3>contact us</h3>
+	</div>
+	<div id="contactus">
+	<p>One's ability to think gives him his identity in this world. The thoughts and way of thinking of a person decides his character and talents. kjdekjd jdfnoejo jdnjnj ejfniwjeoiwq ejnwjjkowj rfneknfkwkefjke jenfkenef jenwwndf efnejnf wajnwjn kefnje ejnje ejfe fjfne eekfke </p>
+	</div>
+	<div id="hd2">
+	<h3>About us</h3>
+	</div>
+	<div id="aboutus">
+	<p>One's ability to think gives him his identity in this world. The thoughts and way of thinking of a person decides his character and talents. kjdekjd jdfnoejo jdnjnj ejfniwjeoiwq ejnwjjkowj rfneknfkwkefjke jenfkenef jenwwndf efnejnf wajnwjn kefnje ejnje ejfe fjfne eekfke </p>
+	</div>
+    <br>
+	<br>
+	</div>
+    <hr />
+	
+	<div id="connect">
+	<a href="https://plus.google.com/" target="_blank">
+		<img src="tgoogle+.jpg" alt="google+" style="width:20px;height:20px;float:right;margin:5px;">
+	</a>
+	<a href="https://twitter.com/" target="_blank">
+		<img src="tweet.png" alt="twitter" style="width:20px;height:20px;float:right;margin:5px;">
+	</a>
+	<a href="https://www.facebook.com/" target="_blank">
+		<img src="tfb.png" alt="facebook" style="width:20px;height:20px;float:right;margin:5px;">
+	</a>
+	<p style="float:right;">connect us:</p>
+	<br>
+	<br>
+	
+	</div>
+	
+</body>
+</html>

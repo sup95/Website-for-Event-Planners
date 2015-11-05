@@ -1,8 +1,100 @@
-{% for cat in cats %}
-    <div>
-        <h1>{{ cat.caterer_name }}</a></h1>
-	<p>Cuisine:{{ cat.cuisine }}</p>
-        <p>{{ cat.cost }}</p>
-	<p>{{ cat.caterer_id }}</p>
-    </div>
-{% endfor %}
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Caterer</title>
+<link href="{% static "css/caterer.css" %}" type="text/css" rel="stylesheet" />
+</head>
+</head>
+<body>
+	<div id="header">
+	</div>
+	
+
+
+   <div id="section_1">
+    <div id="nav">
+	   <div id="nav_wrapper">
+	       <ul>
+		       <li><a href="#"><b>Themes</b></a>
+				    <ul>
+				     <li><a href="#"><b>Birthday Party</b></a></li>
+				     <li><a href="#"><b>Social Event</b></a></li>
+				     <li><a href="#"><b>Large Event</b></a></li>
+				     <li><a href="#"><b>Wedding</b></a></li>
+				     <li><a href="#"><b>corporate Event</b></a></li>
+				    </ul>
+			   </li>
+			   <li><a href="#"><b>Venue</b></a>
+			      <ul>
+				     <li><a href="#"><b>Banquet Hall</b></a></li>
+				     <li><a href="#"><b>Roof Top</b></a></li>
+				     <li><a href="#"><b>Poolside</b></a></li>
+				     <li><a href="#"><b>Conference Center</b></a></li>
+				     <li><a href="#"><b>Open Space</b></a></li>
+				     <li><a href="#"><b>Hotel</b></a></li>
+				  </ul>
+				</li>  
+			   <li><a href="caterer.html"><b>Caterer</b></a></li>
+			   <li><a href="#"><b>Photographer</b></a>
+					<ul>
+				     <li><a href="#"><b>Candid</b></a></li>
+					 <li><a href="#"><b>HDR</b></a></li>
+				   </ul>
+			   </li>
+			   <li><a href="#"><b>Decorators</b></a>
+					<ul>
+				     <li><a href="#"><b>Birthday Party</b></a></li>
+				     <li><a href="#"><b>Social Event</b></a></li>
+				     <li><a href="#"><b>Large Event</b></a></li>
+				     <li><a href="#"><b>Wedding</b></a></li>
+				     <li><a href="#"><b>corporate Event</b></a></li>
+				    </ul>
+				</li>
+			   <li><a href="#"><b>Accomodations</b></a></li>
+			   <li><a href="#"><b>Entertainment Events</b></a>
+										<ul>
+				     <li><a href="#"><b>DJ</b></a></li>
+				     <li><a href="#"><b>Singers</b></a></li>
+				     <li><a href="#"><b>Music Band</b></a></li>
+				     <li><a href="#"><b>Choreographer</b></a></li>
+				    </ul>
+				</li>
+			   
+			</ul>
+         </div>
+     </div>
+	<img src="images4.jpg" alt="caterer"  style="width:100%;height:400px;">
+	<div id="caterers">
+	<ul class="vertical_menu">
+	<p style="color:red;">budget</p>
+	<li><a href="#">100-200</a></li>
+	<li><a href="#">200-300</a></li>
+	<li><a href="#">300-400</a></li>
+	<li><a href="#">400-500</a></li>
+	<li><a href="#">500-600</a></li>
+	<p style="color:red;">cuisine</p>
+	<li><a href="#">indian</a></li>
+	<li><a href="#">mexican</a></li>
+	<li><a href="#">italian</a></li>
+	<li><a href="#">chinese</a></li>
+	<li><a href="#">continental</a></li>
+	</ul>
+	</div>
+	<div id="content" >
+		<p style="padding-left=15px;">
+			{% for cat in cats %}
+			    <div>
+				<h1>{{ cat.caterer_name }}</a></h1>
+				<p>Cuisine:{{ cat.cuisine }}</p>
+				<p>{{ cat.cost }}</p>
+				<p>{{ cat.caterer_id }}</p>
+			    </div>
+			{% endfor %}
+		</p>
+	</div>
+	
+
+</body>
+</html>
