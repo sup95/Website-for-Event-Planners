@@ -1,0 +1,12 @@
+{% extends "EventPlanners/base.html" %}
+
+{% block content %}
+	{% for photo in photos %}
+		 <div>
+			<h1>{{ photo.photographer_name }}</a></h1>
+			<p>Styles:{{ photo.photography_type }}</p>
+			<p>{{ photo.videography}}</p>
+			<p>{{ photo.photo_cost }}</p>
+		</div>
+	{% endfor %}
+{% endblock %}
