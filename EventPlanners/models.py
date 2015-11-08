@@ -22,3 +22,14 @@ class Photographers(models.Model):
 
     def __str__(self):
         return self.photographer_name
+
+
+class Entertainment(models.Model):
+
+    e_id = models.AutoField(primary_key=True)
+    entertainers_name = models.CharField(max_length=100)
+    entertainers_type = models.CharField(max_length=100)
+    entertainment_cost = models.IntegerField()    
+
+    def __str__(self):
+        return self.entertainers_name

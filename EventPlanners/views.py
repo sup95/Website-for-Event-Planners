@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .models import Caterers
 from .models import Photographers
+from .models import Entertainment
 
 
 def frontpage(request):
@@ -15,4 +16,9 @@ def caterers_list(request):
 def photographers_list(request):
     photos = Photographers.objects.all()
     return render(request, 'EventPlanners/photographers_list.html', {'photos': photos})
+
+
+def entertainers_list(request):
+    entertain = Entertainment.objects.all()
+    return render(request, 'EventPlanners/entertainers_list.html', {'entertain': entertain})
 
