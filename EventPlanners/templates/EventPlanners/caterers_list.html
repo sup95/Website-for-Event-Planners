@@ -1,6 +1,11 @@
 {% extends "EventPlanners/base.html" %}
 
 
+{% block title %}
+	Caterer
+{% endblock %}
+
+
 {% block filter %}
 	<div>	
 	<ul class="vertical_menu">
@@ -24,9 +29,9 @@
 {% block content %}
 	{% for cat in cats %}
 		 <div>
-			<h1>{{ cat.caterer_name }}</a></h1>
-			<p>Cuisine:{{ cat.cuisine }}</p>
-			<p>{{ cat.cost }}</p>
+			<h3>{{ cat.caterer_name }}</h3>
+			<p>Cuisine:{{ cat.cuisine }}<br>
+			Cost: {{ cat.cost }}</p>
 		</div>
 	{% endfor %}
 {% endblock %}

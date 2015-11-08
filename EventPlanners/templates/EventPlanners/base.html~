@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title></title>
+<title>{% block title %} {% endblock %} </title>
 <link href="{% static "css/caterer.css" %}" type="text/css" rel="stylesheet" />
 </head>
 </head>
@@ -20,10 +20,9 @@
 		       <li><a href="#"><b>Themes</b></a>
 				    <ul>
 				     <li><a href="#"><b>Birthday Party</b></a></li>
-				     <li><a href="#"><b>Social Event</b></a></li>
-				     <li><a href="#"><b>Large Event</b></a></li>
-				     <li><a href="#"><b>Wedding</b></a></li>
 				     <li><a href="#"><b>corporate Event</b></a></li>
+				     <li><a href="#"><b>Wedding</b></a></li>
+				     <li><a href="#"><b>Get Together</b></a></li>				     
 				    </ul>
 			   </li>
 			   <li><a href="#"><b>Venue</b></a>
@@ -36,7 +35,15 @@
 				     <li><a href="#"><b>Hotel</b></a></li>
 				  </ul>
 				</li>  
-			   <li><a href="caterers_list.html"><b>Caterer</b></a></li>
+			   <li><a href="caterers_list.html"><b>Caterer</b></a>
+				<ul>
+				    <li><a href="caterers_indian.html"><b>Indian</b></a></li>
+				    <li><a href="caterers_continental.html"><b>Continental</b></a></li>
+				    <li><a href="caterers_mexican.html"><b>Mexican</b></a></li>
+				    <li><a href="caterers_italian.html"><b>Italian</b></a></li>
+				    <li><a href="caterers_chinese.html"><b>Chinese</b></a></li>
+				</ul>
+			   </li>
 			   <li><a href="photographers_list.html"><b>Photographer</b></a>
 					<ul>
 				     <li><a href="#"><b>Candid</b></a></li>

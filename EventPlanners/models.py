@@ -33,3 +33,16 @@ class Entertainment(models.Model):
 
     def __str__(self):
         return self.entertainers_name
+
+
+class Themes(models.Model):
+
+    theme_id = models.AutoField(primary_key=True)
+    theme_type = models.CharField(max_length=100) 
+    theme_name = models.CharField(max_length=100)  
+
+    def __str__(self):
+        return self.theme_name
+
+
+

@@ -24,9 +24,9 @@
 {% block content %}
 	{% for ent in entertain %}
 		 <div>
-			<h1>{{ ent.entertainers_name }}</a></h1>
-			<p>Style:{{ ent.entertainers_type }}</p>
-			<p>{{ ent.entertainment_cost }}</p>
+			<h3>{{ ent.entertainers_name }}</a></h1>
+			<p>Style:{{ ent.entertainers_type }}<br>
+			Cost: {{ ent.entertainment_cost }}</p>
 		</div>
 	{% endfor %}
 {% endblock %}

@@ -2,7 +2,7 @@
 
 
 {% block title %}
-	Entertainment
+	Chinese Cuisine Caterers
 {% endblock %}
 
 
@@ -27,11 +27,11 @@
 
 
 {% block content %}
-	{% for ent in entertain %}
+	<h1>Chinese Cuisine</h1>
+	{% for cat_c in cats_c %}
 		 <div>
-			<h3>{{ ent.entertainers_name }}</a></h1>
-			<p>Style:{{ ent.entertainers_type }}<br>
-			Cost: {{ ent.entertainment_cost }}</p>
+			<h3>{{ cat_c.caterer_name }}</h3>
+			Cost(approx): {{ cat_c.cost }}</p>
 		</div>
 	{% endfor %}
 {% endblock %}
