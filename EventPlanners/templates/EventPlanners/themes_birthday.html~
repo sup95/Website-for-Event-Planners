@@ -1,0 +1,36 @@
+{% extends "EventPlanners/base.html" %}
+
+
+{% block title %}
+	Birthday Party Themes
+{% endblock %}
+
+
+{% block filter %}
+	<div>	
+	<ul class="vertical_menu">
+	<p style="color:red;">budget</p>
+	<li><a href="#">100-200</a></li>
+	<li><a href="#">200-300</a></li>
+	<li><a href="#">300-400</a></li>
+	<li><a href="#">400-500</a></li>
+	<li><a href="#">500-600</a></li>
+	<p style="color:red;">cuisine</p>
+	<li><a href="#">indian</a></li>
+	<li><a href="#">mexican</a></li>
+	<li><a href="#">italian</a></li>
+	<li><a href="#">chinese</a></li>
+	<li><a href="#">continental</a></li>
+	</ul>
+	</div>
+{% endblock %}
+
+
+{% block content %}
+	<h1>Birthday Party Themes</h1>
+	{% for theme_b in themes_b %}
+		 <div>
+			<p>{{ theme_b.theme_name }}</p>
+		</div>
+	{% endfor %}
+{% endblock %}

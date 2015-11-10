@@ -45,4 +45,29 @@ class Themes(models.Model):
         return self.theme_name
 
 
+class Venue(models.Model):
+
+    venue_id = models.AutoField(primary_key=True) 
+    venue_name = models.CharField(max_length=100) 
+    venue_type = models.CharField(max_length=100) 
+    venue_location = models.CharField(max_length=100)
+    venue_cost = models.IntegerField() 
+
+    def __str__(self):
+        return self.venue_location
+
+
+class Accomodations(models.Model):
+
+    acc_id = models.AutoField(primary_key=True) 
+    acc_fk = models.ForeignKey(Venue)
+    acc_name = models.CharField(max_length=100) 
+    acc_type = models.CharField(max_length=100) 
+    acc_location = models.CharField(max_length=100)
+    acc_cost = models.IntegerField() 
+
+    def __str__(self):
+        return self.acc_name
+
+
 

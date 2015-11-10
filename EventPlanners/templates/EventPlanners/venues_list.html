@@ -1,0 +1,39 @@
+{% extends "EventPlanners/base.html" %}
+
+
+{% block title %}
+	Venues
+{% endblock %}
+
+
+{% block filter %}
+	<div>	
+	<ul class="vertical_menu">
+	<p style="color:red;">budget</p>
+	<li><a href="#">100-200</a></li>
+	<li><a href="#">200-300</a></li>
+	<li><a href="#">300-400</a></li>
+	<li><a href="#">400-500</a></li>
+	<li><a href="#">500-600</a></li>
+	<p style="color:red;">cuisine</p>
+	<li><a href="#">indian</a></li>
+	<li><a href="#">mexican</a></li>
+	<li><a href="#">italian</a></li>
+	<li><a href="#">chinese</a></li>
+	<li><a href="#">continental</a></li>
+	</ul>
+	</div>
+{% endblock %}
+
+
+{% block content %}
+	{% for venue in venues %}
+		 <div>
+			<h3>{{ venue.venue_name }}</h3>
+			<p>Type:{{ venue.venue_type}}<br>
+			Location:{{venue.venue_location}}<br>
+			Cost(approx):{{venue.venue_cost}}<br> 
+			<a href="#">Find accomodations nearby!</a></p>
+		</div>
+	{% endfor %}
+{% endblock %}

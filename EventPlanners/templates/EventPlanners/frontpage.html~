@@ -17,15 +17,15 @@
     <div id="nav">
 	   <div id="nav_wrapper">
 	       <ul>
-		       <li><a href="#"><b>Themes</b></a>
+		       <li><a href="themes_list.html"><b>Themes</b></a>
 				    <ul>
-				     <li><a href="#"><b>Birthday Party</b></a></li>
-				     <li><a href="#"><b>corporate Event</b></a></li>
-				     <li><a href="#"><b>Wedding</b></a></li>
-				     <li><a href="#"><b>Get Together</b></a></li>				     
+				     <li><a href="themes_birthday.html"><b>Birthday Party</b></a></li>
+				     <li><a href="themes_corporate_event.html"><b>corporate Event</b></a></li>
+				     <li><a href="themes_wedding.html"><b>Wedding</b></a></li>
+				     <li><a href="themes_get_together.html"><b>Get Together</b></a><li>				     
 				    </ul>
 			   </li>
-			   <li><a href="#"><b>Venue</b></a>
+			   <li><a href="venues_list.html"><b>Venue</b></a>
 			      <ul>
 				     <li><a href="#"><b>Banquet Hall</b></a></li>
 				     <li><a href="#"><b>Roof Top</b></a></li>
@@ -62,10 +62,10 @@
 			   <li><a href="#"><b>Accomodations</b></a></li>
 			   <li><a href="entertainers_list.html"><b>Entertainment Events</b></a>
 										<ul>
-				     <li><a href="#"><b>DJ</b></a></li>
-				     <li><a href="#"><b>Singers</b></a></li>
-				     <li><a href="#"><b>Music Band</b></a></li>
-				     <li><a href="#"><b>Choreographer</b></a></li>
+				     <li><a href="entertainers_dj.html"><b>DJ</b></a></li>
+				     <li><a href="entertainers_musicians.html"><b>Musicicans</b></a></li>
+				     <li><a href="entertainers_dance.html"><b>Dance</b></a></li>
+				     <li><a href="entertainers_comedians.html"><b>Comedians</b></a></li>
 				    </ul>
 				</li>
 			   

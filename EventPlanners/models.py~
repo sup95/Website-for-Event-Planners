@@ -33,3 +33,41 @@ class Entertainment(models.Model):
 
     def __str__(self):
         return self.entertainers_name
+
+
+class Themes(models.Model):
+
+    theme_id = models.AutoField(primary_key=True)
+    theme_type = models.CharField(max_length=100) 
+    theme_name = models.CharField(max_length=100)  
+
+    def __str__(self):
+        return self.theme_name
+
+
+class Venue(models.Model):
+
+    venue_id = models.AutoField(primary_key=True) 
+    venue_name = models.CharField(max_length=100) 
+    venue_type = models.CharField(max_length=100) 
+    venue_location = models.CharField(max_length=100)
+    venue_cost = models.IntegerField() 
+
+    def __str__(self):
+        return self.venue_name
+
+
+class Accomodations(models.Model):
+
+    acc_id = models.AutoField(primary_key=True) 
+    acc_fk = models.ForeignKey(Venue)
+    acc_name = models.CharField(max_length=100) 
+    acc_type = models.CharField(max_length=100) 
+    acc_location = models.CharField(max_length=100)
+    acc_cost = models.IntegerField() 
+
+    def __str__(self):
+        return self.acc_name
+
+
+
