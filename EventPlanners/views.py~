@@ -3,6 +3,7 @@ from .models import Caterers
 from .models import Photographers
 from .models import Entertainment
 from .models import Themes
+from .models import Venue
 
 
 def frontpage(request):
@@ -96,5 +97,6 @@ def themes_get_together(request):
 def venues_list(request):
     venues = Venue.objects.all()
     return render(request, 'EventPlanners/venues_list.html', {'venues': venues})
+
 
 

@@ -94,8 +94,9 @@ def themes_get_together(request):
     return render(request, 'EventPlanners/themes_get_together.html', {'themes_g': themes_g})
 
 
-def venues_list(request):
+def venue_list(request):
     venues = Venue.objects.all()
-    return render(request, 'EventPlanners/venues_list.html', {'venues': venues})
+    return render(request, 'EventPlanners/venue_list.html', {'venues': venues})
+
 
 

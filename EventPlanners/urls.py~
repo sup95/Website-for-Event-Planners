@@ -24,6 +24,8 @@ urlpatterns = [
     url(r'^themes_corporate_event.html$', views.themes_corporate_event, name='themes_corporate_event'),
     url(r'^themes_wedding.html$', views.themes_wedding, name='themes_wedding'),
     url(r'^themes_get_together.html$', views.themes_get_together, name='themes_get_together'),
+
+    url(r'^venue_list.html$', views.venues_list, name='venues_list'),
 ]
 
 
