@@ -4,6 +4,8 @@ from .models import Photographers
 from .models import Entertainment
 from .models import Themes
 from .models import Venue
+from .models import Accomodations
+from django.db.models import F
 
 
 def frontpage(request):
@@ -94,9 +96,19 @@ def themes_get_together(request):
     return render(request, 'EventPlanners/themes_get_together.html', {'themes_g': themes_g})
 
 
-def venues_list(request):
+def venue_list(request):
     venues = Venue.objects.all()
-    return render(request, 'EventPlanners/venues_list.html', {'venues': venues})
+    return render(request, 'EventPlanners/venue_list.html', {'venues': venues})
+
+
+def accomodations_nearby(request):
+    nearby_venues = Accomodations.objects.filter(acc_location=F('acc_fk__venue_location'))
+    return render(request, 'EventPlanners/accomodations_nearby.html', {'nearby_venues': nearby_venues})
+
+
+def accomodations(request):
+    accs = Accomodations.objects.all()
+    return render(request, 'EventPlanners/accomodations.html', {'accs': accs})
 
 
 

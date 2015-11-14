@@ -32,7 +32,8 @@
 			<h3>{{ venue.venue_name }}</h3>
 			<p>Type:{{ venue.venue_type}}<br>
 			Location:{{venue.venue_location}}<br>
-			Cost(approx):{{venue.venue_cost}}<br></p>
+			Cost(approx):{{venue.venue_cost}}<br>
+			<a href="photographers_list.html"> Find accomodations nearby!</a></p>
 		</div>
 	{% endfor %}
 {% endblock %}

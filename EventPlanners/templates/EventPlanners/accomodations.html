@@ -2,7 +2,7 @@
 
 
 {% block title %}
-	Venues
+	Accomodations
 {% endblock %}
 
 
@@ -27,13 +27,12 @@
 
 
 {% block content %}
-	{% for venue in venues %}
+	{% for acc in accs %}
 		 <div>
-			<h3>{{ venue.venue_name }}</h3>
-			<p>Type:{{ venue.venue_type}}<br>
-			Location:{{venue.venue_location}}<br>
-			Cost(approx):{{venue.venue_cost}}<br>
-			<a href="accomodations_nearby.html"> Find accomodations nearby!</a></p>
+			<h3>{{ acc.acc_name }}</h3>
+			<p>Type:{{ acc.acc_type }}<br>
+			Location:{{ acc.acc_location }}<br>
+			Cost: {{ acc.acc_cost }}</p>
 		</div>
 	{% endfor %}
 {% endblock %}

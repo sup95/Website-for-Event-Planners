@@ -26,6 +26,9 @@ urlpatterns = [
     url(r'^themes_get_together.html$', views.themes_get_together, name='themes_get_together'),
 
     url(r'^venue_list.html$', views.venue_list, name='venue_list'),
+    url(r'^accomodations_nearby.html$', views.accomodations_nearby, name='accomodations_nearby'),
+
+    url(r'^accomodations.html$', views.accomodations, name='accomodations'),
 ]
 
 
