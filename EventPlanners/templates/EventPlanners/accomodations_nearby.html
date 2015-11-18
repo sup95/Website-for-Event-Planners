@@ -15,12 +15,7 @@
 	<li><a href="#">300-400</a></li>
 	<li><a href="#">400-500</a></li>
 	<li><a href="#">500-600</a></li>
-	<p style="color:red;">cuisine</p>
-	<li><a href="#">indian</a></li>
-	<li><a href="#">mexican</a></li>
-	<li><a href="#">italian</a></li>
-	<li><a href="#">chinese</a></li>
-	<li><a href="#">continental</a></li>
+	
 	</ul>
 	</div>
 {% endblock %}
@@ -33,6 +28,12 @@
 			<p>Type:{{ nearby_venue.acc_type }}<br>
 			Location:{{ nearby_venue.acc_location }}<br>
 			Cost: {{ nearby_venue.acc_cost }}</p>
+			<button onclick="myFunction()">Book</button>
+			<script>
+			function myFunction() {
+			    alert("Mail has been sent to the organisation. Kindly await for a reply mail with the confirmation details. Thankyou.");
+			}
+			</script>
 		</div>
 	{% endfor %}
 {% endblock %}

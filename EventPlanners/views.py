@@ -6,6 +6,7 @@ from .models import Entertainment
 from .models import Themes
 from .models import Venue
 from .models import Accomodations
+from .models import Decorators
 
 
 def frontpage(request):
@@ -44,6 +45,16 @@ def caterers_chinese(request):
 def photographers_list(request):
     photos = Photographers.objects.all()
     return render(request, 'EventPlanners/photographers_list.html', {'photos': photos})
+
+
+def candid(request):
+    photos = Photographers.objects.filter(photography_type = 'Candid')
+    return render(request, 'EventPlanners/candid.html', {'photos': photos})
+
+
+def hdr(request):
+    photos = Photographers.objects.filter(photography_type = 'Studio')
+    return render(request, 'EventPlanners/hdr.html', {'photos': photos})
 
 
 def entertainers_list(request):
@@ -101,6 +112,36 @@ def venue_list(request):
     return render(request, 'EventPlanners/venue_list.html', {'venues': venues})
 
 
+def venue_banquet_hall(request):
+    venues = Venue.objects.filter(venue_type = 'Banquet Hall')
+    return render(request, 'EventPlanners/venue_banquet_hall.html', {'venues': venues})
+
+
+def venue_roof_top(request):
+    venues = Venue.objects.filter(venue_type = 'Roof Top')
+    return render(request, 'EventPlanners/venue_roof_top.html', {'venues': venues})
+
+
+def venue_poolside(request):
+    venues = Venue.objects.filter(venue_type = 'Poolside')
+    return render(request, 'EventPlanners/venue_poolside.html', {'venues': venues})
+
+
+def venue_conference_center(request):
+    venues = Venue.objects.filter(venue_type = 'Conference Center')
+    return render(request, 'EventPlanners/venue_conference_center.html', {'venues': venues})
+
+
+def venue_hotel(request):
+    venues = Venue.objects.filter(venue_type = 'Hotel')
+    return render(request, 'EventPlanners/venue_hotel.html', {'venues': venues})
+
+
+def venue_open_space(request):
+    venues = Venue.objects.filter(venue_type = 'Open Space')
+    return render(request, 'EventPlanners/venue_open_space.html', {'venues': venues})
+
+
 def accomodations_nearby(request):
     nearby_venues = Accomodations.objects.filter(acc_location=F('acc_fk__venue_location'))
     return render(request, 'EventPlanners/accomodations_nearby.html', {'nearby_venues': nearby_venues})
@@ -109,6 +150,21 @@ def accomodations_nearby(request):
 def accomodations(request):
     accs = Accomodations.objects.all()
     return render(request, 'EventPlanners/accomodations.html', {'accs': accs})
+
+
+def service_apartments(request):
+    accs = Accomodations.objects.filter(acc_type = 'Service Apartment')
+    return render(request, 'EventPlanners/service_apartments.html', {'accs': accs})
+
+
+def accomodation_hotel(request):
+    accs = Accomodations.objects.filter(acc_type = 'Hotel')
+    return render(request, 'EventPlanners/accomodation_hotel.html', {'accs': accs})
+
+
+def decorators(request):
+    decs = Decorators.objects.all()
+    return render(request, 'EventPlanners/decorators.html', {'decs': decs})
 
 
 

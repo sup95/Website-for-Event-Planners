@@ -1,0 +1,39 @@
+{% extends "EventPlanners/base.html" %}
+{% load staticfiles %}
+
+
+{% block insert_image %}
+	<img src="{% static "images/venue.jpg" %}" alt="caterer"  style="width:100%;height:400px;">
+{% endblock %}
+
+
+{% block title %}
+	Open Space
+{% endblock %}
+
+
+{% block filter %}
+	<div>	
+	<ul class="vertical_menu">
+	<p style="color:red;">budget</p>
+	<li><a href="#">100-200</a></li>
+	<li><a href="#">200-300</a></li>
+	<li><a href="#">300-400</a></li>
+	<li><a href="#">400-500</a></li>
+	<li><a href="#">500-600</a></li>
+	</ul>
+	</div>
+{% endblock %}
+
+
+{% block content %}
+	{% for venue in venues %}
+		 <div>
+			<h3>{{ venue.venue_name }}</h3>
+			<p>Type:{{ venue.venue_type}}<br>
+			Location:{{venue.venue_location}}<br>
+			Cost(approx):{{venue.venue_cost}}<br>
+			<a href="accomodations_nearby.html"> Find accomodations nearby!</a></p>
+		</div>
+	{% endfor %}
+{% endblock %}

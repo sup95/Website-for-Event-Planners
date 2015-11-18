@@ -1,0 +1,45 @@
+{% extends "EventPlanners/base.html" %}
+
+{% load staticfiles %}
+
+{% block insert_image %}
+	<img src="{% static "images/caterer.jpg" %}" alt="caterer"  style="width:100%;height:400px;">
+{% endblock %}
+
+{% block title %}
+	Chinese Cuisine Caterers
+{% endblock %}
+
+
+{% block filter %}
+	<div>	
+	<ul class="vertical_menu">
+	<p style="color:red;">budget</p>
+	<li><a href="#">100-200</a></li>
+	<li><a href="#">200-300</a></li>
+	<li><a href="#">300-400</a></li>
+	<li><a href="#">400-500</a></li>
+	<li><a href="#">500-600</a></li>
+	</ul>
+	</div>
+{% endblock %}
+
+
+{% block content %}
+	<h1>Chinese Cuisine</h1>
+	{% for cat_c in cats_c %}
+		 <div>
+			<h3>{{ cat_c.caterer_name }}</h3>
+			Cost(approx): {{ cat_c.cost }}</p>
+			<button onclick="myFunction()">Book</button>
+			<script>
+			function myFunction() {
+			    alert("Mail has been sent to the organisation. Kindly await for a reply mail with the confirmation details. Thankyou.");
+			}
+			</script>
+		</div>
+	{% endfor %}
+{% endblock %}
+
+
+

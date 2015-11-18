@@ -1,0 +1,39 @@
+{% extends "EventPlanners/base.html" %}
+{% load staticfiles %}
+
+{% block insert_image %}
+	<img src="{% static "images/decorations.jpg" %}" alt="caterer"  style="width:100%;height:400px;">
+{% endblock %}
+
+{% block title %}
+	Decorators
+{% endblock %}
+
+
+{% block filter %}
+	<div>	
+	<ul class="vertical_menu">
+	<p style="color:red;">budget</p>
+	<li><a href="#">100-200</a></li>
+	<li><a href="#">200-300</a></li>
+	<li><a href="#">300-400</a></li>
+	<li><a href="#">400-500</a></li>
+	<li><a href="#">500-600</a></li>
+	</div>
+{% endblock %}
+
+
+{% block content %}
+	{% for dec in decs %}
+		 <div>
+			<h3>{{ dec.dec_name }}</h3>
+			<p>Cost: {{ dec.dec_cost }}</p>
+			<button onclick="myFunction()">Book</button>
+			<script>
+			function myFunction() {
+			    alert("Mail has been sent to the organisation. Kindly await for a reply mail with the confirmation details. Thankyou.");
+			}
+			</script>
+		</div>
+	{% endfor %}
+{% endblock %}

@@ -9,6 +9,7 @@
 </head>
 <body>
 	<div id="header">
+		<img src="{% static "images/polka.png" %}" alt="name" style="width:400px;height:150px">
 	</div>
 	
 
@@ -17,6 +18,7 @@
     <div id="nav">
 	   <div id="nav_wrapper">
 	       <ul>
+			<li><a href="frontpage.html"><b>Home</b></a></li>
 		       <li><a href="themes_list.html"><b>Themes</b></a>
 				    <ul>
 				     <li><a href="themes_birthday.html"><b>Birthday Party</b></a></li>
@@ -27,12 +29,12 @@
 			   </li>
 			   <li><a href="venue_list.html"><b>Venue</b></a>
 			      <ul>
-				     <li><a href="#"><b>Banquet Hall</b></a></li>
-				     <li><a href="#"><b>Roof Top</b></a></li>
-				     <li><a href="#"><b>Poolside</b></a></li>
-				     <li><a href="#"><b>Conference Center</b></a></li>
-				     <li><a href="#"><b>Open Space</b></a></li>
-				     <li><a href="#"><b>Hotel</b></a></li>
+				     <li><a href="venue_banquet_hall.html"><b>Banquet Hall</b></a></li>
+				     <li><a href="venue_roof_top.html"><b>Roof Top</b></a></li>
+				     <li><a href="venue_poolside.html"><b>Poolside</b></a></li>
+				     <li><a href="venue_conference_center.html"><b>Conference Center</b></a></li>
+				     <li><a href="venue_open_space.html"><b>Open Space</b></a></li>
+				     <li><a href="venue_hotel.html"><b>Hotel</b></a></li>
 				  </ul>
 				</li>  
 			   <li><a href="caterers_list.html"><b>Caterer</b></a>
@@ -46,23 +48,23 @@
 			   </li>
 			   <li><a href="photographers_list.html"><b>Photographer</b></a>
 					<ul>
-				     <li><a href="#"><b>Candid</b></a></li>
-					 <li><a href="#"><b>HDR</b></a></li>
+				     <li><a href="candid.html"><b>Candid</b></a></li>
+					 <li><a href="hdr.html"><b>HDR</b></a></li>
 				   </ul>
 			   </li>
-			   <li><a href="#"><b>Decorators</b></a>
-					<ul>
+			   <li><a href="decorators.html"><b>Decorators</b></a>
+					<!--ul>
 				     <li><a href="#"><b>Birthday Party</b></a></li>
 				     <li><a href="#"><b>Social Event</b></a></li>
 				     <li><a href="#"><b>Large Event</b></a></li>
 				     <li><a href="#"><b>Wedding</b></a></li>
 				     <li><a href="#"><b>corporate Event</b></a></li>
-				    </ul>
+				    </ul-->
 				</li>
 			   <li><a href="accomodations.html"><b>Accomodations</b></a>
 				<ul>
-				     <li><a href="#"><b>Service Apartments</b></a></li>
-				     <li><a href="#"><b>Hotels</b></a></li>
+				     <li><a href="service_apartments.html"><b>Service Apartments</b></a></li>
+				     <li><a href="accomodation_hotel.html"><b>Hotels</b></a></li>
 				</ul>
 			   </li>
 			   <li><a href="entertainers_list.html"><b>Entertainment Events</b></a>
@@ -77,7 +79,7 @@
 			</ul>
          </div>
      </div>
-	<img src="images4.jpg" alt="caterer"  style="width:100%;height:400px;">
+	{% block insert_image %} {% endblock %}
 	<div id="caterers">
 		{% block filter %}
 		{% endblock %}

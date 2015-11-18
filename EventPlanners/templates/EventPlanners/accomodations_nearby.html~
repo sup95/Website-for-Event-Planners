@@ -2,7 +2,7 @@
 
 
 {% block title %}
-	Accomodations Nearby
+	Nearby Accomodations
 {% endblock %}
 
 
@@ -15,23 +15,19 @@
 	<li><a href="#">300-400</a></li>
 	<li><a href="#">400-500</a></li>
 	<li><a href="#">500-600</a></li>
-	<p style="color:red;">cuisine</p>
-	<li><a href="#">indian</a></li>
-	<li><a href="#">mexican</a></li>
-	<li><a href="#">italian</a></li>
-	<li><a href="#">chinese</a></li>
-	<li><a href="#">continental</a></li>
+	
 	</ul>
 	</div>
 {% endblock %}
 
 
 {% block content %}
-	{% for cat in cats %}
+	{% for nearby_venue in nearby_venues %}
 		 <div>
-			<h3>{{ cat.caterer_name }}</h3>
-			<p>Cuisine:{{ cat.cuisine }}<br>
-			Cost: {{ cat.cost }}</p>
+			<h3>{{ nearby_venue.acc_name }}</h3>
+			<p>Type:{{ nearby_venue.acc_type }}<br>
+			Location:{{ nearby_venue.acc_location }}<br>
+			Cost: {{ nearby_venue.acc_cost }}</p>
 		</div>
 	{% endfor %}
 {% endblock %}

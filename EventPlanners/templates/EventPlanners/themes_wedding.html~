@@ -1,0 +1,30 @@
+{% extends "EventPlanners/base.html" %}
+
+
+{% block title %}
+	Wedding Themes
+{% endblock %}
+
+
+{% block filter %}
+	<div>	
+	<ul class="vertical_menu">
+	<p style="color:red;">budget</p>
+	<li><a href="#">100-200</a></li>
+	<li><a href="#">200-300</a></li>
+	<li><a href="#">300-400</a></li>
+	<li><a href="#">400-500</a></li>
+	<li><a href="#">500-600</a></li>
+	</ul>
+	</div>
+{% endblock %}
+
+
+{% block content %}
+	<h1>Wedding Themes</h1>
+	{% for theme_w in themes_w %}
+		 <div>
+			<p>{{ theme_w.theme_name }}</p>
+		</div>
+	{% endfor %}
+{% endblock %}

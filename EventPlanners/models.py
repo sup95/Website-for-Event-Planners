@@ -70,4 +70,15 @@ class Accomodations(models.Model):
         return self.acc_name
 
 
+class Decorators(models.Model):
+
+    dec_id = models.AutoField(primary_key=True) 
+    dec_fk = models.ForeignKey(Themes)
+    dec_name = models.CharField(max_length=100) 
+    dec_cost = models.IntegerField() 
+
+    def __str__(self):
+        return self.dec_name
+
+
 

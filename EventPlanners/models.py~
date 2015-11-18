@@ -54,7 +54,7 @@ class Venue(models.Model):
     venue_cost = models.IntegerField() 
 
     def __str__(self):
-        return self.venue_name
+        return self.venue_location
 
 
 class Accomodations(models.Model):

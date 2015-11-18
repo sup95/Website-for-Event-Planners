@@ -1,4 +1,10 @@
 {% extends "EventPlanners/base.html" %}
+{% load staticfiles %}
+
+
+{% block insert_image %}
+	<img src="{% static "images/photography.jpg" %}" alt="caterer"  style="width:100%;height:400px;">
+{% endblock %}
 
 
 {% block title %}
@@ -15,12 +21,6 @@
 	<li><a href="#">300-400</a></li>
 	<li><a href="#">400-500</a></li>
 	<li><a href="#">500-600</a></li>
-	<p style="color:red;">cuisine</p>
-	<li><a href="#">indian</a></li>
-	<li><a href="#">mexican</a></li>
-	<li><a href="#">italian</a></li>
-	<li><a href="#">chinese</a></li>
-	<li><a href="#">continental</a></li>
 	</ul>
 	</div>
 {% endblock %}
@@ -31,8 +31,8 @@
 		 <div>
 			<h3>{{ photo.photographer_name }}</h3>
 			<p>Styles:{{ photo.photography_type }}<br>
-			{{ photo.videography}}<br>
-			{{ photo.photo_cost }}</p>
+			Videography: {{ photo.videography}}<br>
+			Cost: {{ photo.photo_cost }}</p>
 		</div>
 	{% endfor %}
 {% endblock %}
